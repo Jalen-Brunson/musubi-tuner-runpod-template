@@ -80,8 +80,8 @@ WORKDIR /notebooks
 
 EXPOSE 8888 6006
 
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
+COPY start.sh /notebooks/start.sh
+RUN chmod +x /notebooks/start.sh
 
 ENTRYPOINT ["/start.sh"]
 
