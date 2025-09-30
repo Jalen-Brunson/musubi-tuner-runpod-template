@@ -14,7 +14,7 @@ ENV PYTHONUNBUFFERED=1
 ENV CMAKE_BUILD_PARALLEL_LEVEL=8
 
 # create notebooks dir
-RUN mkdir -p /notebooks /notebooks/program/ /notebooks/joycaption/
+RUN mkdir -p /notebooks /notebooks/program/ /notebooks/joycaption/ /notebooks/image_dataset_here/
 # Install basic tools and dependencies first
 RUN ln -snf /usr/share/zoneinfo/$CONTAINER_TIMEZONE /etc/localtime && echo $CONTAINER_TIMEZONE > /etc/timezone
 RUN apt-get update --yes && \
