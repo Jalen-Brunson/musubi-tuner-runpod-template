@@ -81,7 +81,8 @@ WORKDIR /notebooks
 EXPOSE 8888 6006
 
 COPY start.sh /notebooks/start.sh
-COPY /joycaption /notebooks/
+COPY /training /notebooks/
+COPY /joycaption /notebooks/joycaption
 
 RUN chmod +x /notebooks/start.sh
 
