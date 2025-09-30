@@ -55,7 +55,7 @@ run_custom_script() {
 echo "Pod Started"
 configure_dns
 update_musubi_tuner
-run_custom_script
+#run_custom_script
 start_jupyter
 export_env_vars
 echo "Start script(s) finished, pod is ready to use."
