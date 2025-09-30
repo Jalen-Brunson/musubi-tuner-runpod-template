@@ -79,6 +79,12 @@ RUN uv pip install jupyterlab jupyter-archive nbformat \
 WORKDIR /notebooks
 
 EXPOSE 8888 6006
+
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+
+ENTRYPOINT ["/start.sh"]
+
 CMD ["jupyter", "lab", "--allow-root", "--ip=0.0.0.0", "--no-browser", \
     "--ServerApp.trust_xheaders=True", "--ServerApp.disable_check_xsrf=False", \
     "--ServerApp.allow_remote_access=True", "--ServerApp.allow_origin='*'", \
@@ -87,4 +93,3 @@ CMD ["jupyter", "lab", "--allow-root", "--ip=0.0.0.0", "--no-browser", \
     "--ContentsManager.allow_hidden=True", "--LabServerApp.copy_absolute_path=True", \
     "--ServerApp.token=''", "--ServerApp.password=''"]
     
-CMD ["/start.sh"]
