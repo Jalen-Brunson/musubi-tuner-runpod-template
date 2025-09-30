@@ -83,7 +83,7 @@ EXPOSE 8888 6006
 COPY start.sh /notebooks/start.sh
 RUN chmod +x /notebooks/start.sh
 
-ENTRYPOINT ["/start.sh"]
+ENTRYPOINT ["/notebooks/start.sh"]
 
 CMD ["jupyter", "lab", "--allow-root", "--ip=0.0.0.0", "--no-browser", \
     "--ServerApp.trust_xheaders=True", "--ServerApp.disable_check_xsrf=False", \
