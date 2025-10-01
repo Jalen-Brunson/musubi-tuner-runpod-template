@@ -56,6 +56,7 @@ echo "Pod Started"
 configure_dns
 update_musubi_tuner
 #run_custom_script
+export PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True"
 start_jupyter
 export_env_vars
 echo "Start script(s) finished, pod is ready to use."
