@@ -61,6 +61,6 @@ start_jupyter
 export_env_vars
 uv pip install dropbox
 echo "Start script(s) finished, pod is ready to use."
-bash /notebooks/download_wan22_t2v_14B_fp16.sh
-bash /notebooks/joycaption/JoyCaptionRunner.sh
+bash /notebooks/download_wan22_t2v_14B_fp16.sh &
+bash /notebooks/joycaption/JoyCaptionRunner.sh &
 sleep infinity
